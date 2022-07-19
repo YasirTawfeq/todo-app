@@ -16,6 +16,8 @@ html {
   text-align: center;
   border: #FCF9C6 solid 5px;
   border-radius: 5px;
+}
+.App .todo h2 {
   color: #FCF9C6;
 }
 .App .todo ul {
