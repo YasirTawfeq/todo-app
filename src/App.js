@@ -37,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <div className="todo" >
+        <h2>TODO</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Task.." value={input} onChange={handleChange}/>
         <button disabled={!input} type="submit">Add</button>
