@@ -1,0 +1,70 @@
+html {
+  background-color: #C7D36F;
+}
+
+.App {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.App .todo {
+  margin-top: 80px;
+  padding: 20px;
+  width: 400px;
+  background-color: #C7D36F;
+  text-align: center;
+  border: solid 0px;
+  border-radius: 5px;
+}
+.App .todo ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.App .todo ul li {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #FCF9C6;
+  border: solid 0px;
+  border-radius: 10px;
+}
+.App .todo ul li button {
+  padding: 5px;
+  margin: 3px;
+  background-color: #C7D36F;
+  border: solid 0px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.App .todo form {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.App .todo form input {
+  width: 100%;
+  padding: 10px;
+  border: solid 0px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: #FCF9C6;
+  cursor: cell;
+}
+.App .todo form button {
+  padding: 10px;
+  background-color: #FCF9C6;
+  border: solid 0px;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .App .todo {
+    margin-top: 0px;
+  }
+}/*# sourceMappingURL=App.css.map */
