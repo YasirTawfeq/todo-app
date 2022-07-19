@@ -5,14 +5,16 @@ import './App.css';
 function App() {
   const[task,setTask]=useState([{id:234,text:'Add your Todo list'}])
   const [input,setInput]=useState('');
+  const [edited,setEdit]=useState('');
 
   const handleChange=(event)=>{
     setInput(event.target.value)
   }
   const list={
       id:Math.floor(Math.random() * 10000),
-      text:input
+      text: triger?edited:input
     }
+    
   const handleSubmit = (e)=>{
     e.preventDefault();
     setTask(oldList=>[...oldList,list])
@@ -24,10 +26,12 @@ function App() {
     setTask(newItem);
   }
 
-  
+  var triger;
   function edit(id){
-     task.find(item=>item.id===id?setInput(item.text= prompt('Edit')):'')
-     setInput('');
+     triger=true;
+     task.find(item=>item.id===id?setEdit(item.text= prompt('Edit')):'')
+     triger=false;
+    
   }
 
   return (
@@ -39,7 +43,7 @@ function App() {
       </form>
       <ul>
         {task?.map(task =>
-        <li >
+        <li key={task.id}>
           {task.text}
          <div> 
             <button onClick={()=>edit(task.id)}>Edit</button>
