@@ -10,6 +10,7 @@ function App() {
   const handleChange=(event)=>{
     setInput(event.target.value)
   }
+  var triger;
   const list={
       id:Math.floor(Math.random() * 10000),
       text: triger?edited:input
@@ -26,7 +27,6 @@ function App() {
     setTask(newItem);
   }
 
-  var triger;
   function edit(id){
      triger=true;
      task.find(item=>item.id===id?setEdit(item.text= prompt('Edit')):'')
